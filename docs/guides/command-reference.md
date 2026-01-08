@@ -1,6 +1,6 @@
 # Command Reference
 
-> 📖 **日本語ガイドはこちら:** [コマンドリファレンス (日本語)](ja/command-reference.md)
+> 📖 **简体中文指南:** [命令参考 (简体中文)](zh/command-reference.md) | 📖 **繁體中文指南:** [命令參考 (繁體中文)](command-reference_zh-TW.md) | 📖 **日本語ガイドはこちら:** [コマンドリファレンス (日本語)](ja/command-reference.md)
 
 Complete reference for all cc-sdd commands with detailed usage, examples, and troubleshooting.
 

@@ -36,9 +36,9 @@ export type ResolvedConfig = {
 };
 
 const defaults = {
-  agent: 'claude-code' as AgentType,
+  agent: 'cursor' as AgentType,
   os: 'auto' as const,
-  lang: 'en' as SupportedLanguage,
+  lang: 'zh' as SupportedLanguage,
   kiroDir: '.kiro',
   overwrite: 'prompt' as OverwritePolicy,
   backupDir: '.cc-sdd.backup',

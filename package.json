@@ -1,0 +1,26 @@
+{
+  "name": "momo-sdd-monorepo",
+  "version": "2.0.5",
+  "private": true,
+  "type": "module",
+  "description": "Monorepo root for momo-sdd",
+  "workspaces": [
+    "tools/cc-sdd"
+  ],
+  "bin": {
+    "momo-sdd": "./tools/cc-sdd/dist/cli.js"
+  },
+  "scripts": {
+    "build": "npm run build --workspace=tools/cc-sdd",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhukaishengy2025/momo-sdd.git"
+  },
+  "author": "Gota",
+  "license": "MIT"
+}
