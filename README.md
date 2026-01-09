@@ -1,4 +1,4 @@
-# cc-sdd: Spec-driven development for your team's workflow
+# cc-sdd: 为团队工作流打造的规格驱动开发 (Spec-driven development)
 
 <!-- npm badges -->
 [![npm version](https://img.shields.io/npm/v/cc-sdd?logo=npm)](https://www.npmjs.com/package/cc-sdd?activeTab=readme)
@@ -6,85 +6,85 @@
 [![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 <div align="center" style="font-size: 1.1rem; margin-bottom: 1rem;"><sub>
-<a href="./tools/cc-sdd/README.md">English</a> | <a href="./tools/cc-sdd/README_ja.md">日本語</a> | <a href="./tools/cc-sdd/README_zh-TW.md">繁體中文</a> | <a href="./README_zh.md">简体中文</a>
+<a href="./README.md">English</a> | <a href="./tools/cc-sdd/README_ja.md">日本語</a> | <a href="./tools/cc-sdd/README_zh-TW.md">繁體中文</a> | 简体中文
 </sub></div>
 
-## Transform AI coding agents into production-ready spec-driven development
+## 将 AI 编程代理转变为生产级规格驱动开发流程
 
-**One command. Hours instead of weeks. Requirements → Design → Tasks → Implementation.**
+**一个命令。小时级而非周级交付。需求 → 设计 → 任务 → 实施。**
 
-👻 **Kiro-inspired** — Similar Spec-Driven, AI-DLC style as Kiro IDE, so existing Kiro specs remain compatible and portable.
+👻 **受 Kiro 启发** — 采用与 Kiro IDE 类似的规格驱动 (Spec-Driven) 和 AI-DLC 风格，确保现有的 Kiro 规格保持兼容与可移植。
 
-Stop losing 70% of development time to meetings, documentation ceremonies, and scattered context. cc-sdd brings structured **AI-DLC** (AI-Driven Development Lifecycle) and **Spec-Driven Development** to Claude Code, Cursor, Gemini CLI, Codex CLI, GitHub Copilot, Qwen Code, and Windsurf.
+告别 70% 浪费在会议、文档仪式和碎片化上下文中的开发时间。cc-sdd 为 Claude Code, Cursor, Gemini CLI, Codex CLI, GitHub Copilot, Qwen Code 和 Windsurf 带来了结构化的 **AI-DLC** (AI 驱动开发生命周期) 和 **规格驱动开发 (Spec-Driven Development)**。
 
-### What you get:
-- ✅ **Spec-first guarantees** — Approve requirements/design upfront, then AI implements exactly as specified
-- ✅ **Parallel execution ready** — Tasks decomposed for concurrent implementation with dependency tracking
-- ✅ **Team-aligned templates** — Customize once, all agents output docs that fit your approval process
-- ✅ **Project Memory** — AI remembers your architecture, patterns, and standards across sessions
-- ✅ **7 agents, unified workflow** — Same spec-driven process across Claude, Cursor, Gemini, Codex, Copilot, Qwen, Windsurf
-- ✅ **Hours instead of weeks** — Feature planning goes from days to hours with AI-assisted specs
+### 你将获得：
+- ✅ **规格优先保证** — 预先确认需求/设计，AI 严格按照规格实施
+- ✅ **支持并行执行** — 任务被分解为具有依赖跟踪的并发实施项
+- ✅ **团队对齐模板** — 一次自定义，所有代理生成的文档均符合团队审批流程
+- ✅ **项目记忆 (Project Memory)** — AI 会跨会话记住你的架构、模式和标准
+- ✅ **7 种代理，统一工作流** — 在 Claude, Cursor, Gemini, Codex, Copilot, Qwen, Windsurf 上使用相同的规格驱动流程
+- ✅ **小时级交付** — 借助 AI 辅助规格，功能规划从几天缩短至几小时
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
 ```bash
-# Run in your project root directory
+# 在你的项目根目录下运行
 cd your-project
-npx cc-sdd@latest --claude --lang en ## Claude Code
+npx cc-sdd@latest --claude --lang zh ## Claude Code (简体中文)
 
-# ✅ That's it! Now run: /kiro:spec-init <what-to-build>
+# ✅ 就这么简单！现在运行：/kiro:spec-init <要构建的内容>
 ```
 
-**Installation takes 30 seconds.** Supports 7 agents (Claude (Commands / Subagents), Cursor, Gemini, Codex, Copilot, Qwen, Windsurf) × 13 languages.
+**安装仅需 30 秒。** 支持 7 种代理（Claude (Commands / Subagents), Cursor, Gemini, Codex, Copilot, Qwen, Windsurf）以及 13 种语言。
 
-📖 **Next steps:** [All installation options](#%EF%B8%8F-advanced-installation) | [Command Reference](docs/guides/command-reference.md) | [Spec-Driven Guide](docs/guides/spec-driven.md)
+📖 **后续步骤：** [所有安装选项](#%EF%B8%8F-高级安装) | [命令参考](docs/guides/command-reference-zh.md) | [规格驱动指南](docs/guides/spec-driven-zh.md)
 
-## 📋 See It In Action
+## 📋 实战演示
 
-### Example: Building a new Photo Albums Feature
+### 示例：构建新的“相册 (Photo Albums)”功能
 
 ```bash
-/kiro:spec-init Photo albums with upload, tagging, and sharing
-/kiro:spec-requirements photo-albums-en
-/kiro:spec-design photo-albums-en -y
-/kiro:spec-tasks photo-albums-en -y
+/kiro:spec-init 具有上传、标签和共享功能的相册
+/kiro:spec-requirements photo-albums-zh
+/kiro:spec-design photo-albums-zh -y
+/kiro:spec-tasks photo-albums-zh -y
 ```
 
-**Generated in 10 minutes:**
-- ✅ [requirements.md](.kiro/specs/photo-albums-en/requirements.md) — 15 EARS-format requirements
-- ✅ [design.md](.kiro/specs/photo-albums-en/design.md) — Architecture with Mermaid diagrams
-- ✅ [tasks.md](.kiro/specs/photo-albums-en/tasks.md) — 12 implementation tasks with dependencies
+**10 分钟内生成：**
+- ✅ [requirements.md](.kiro/specs/photo-albums-zh/requirements.md) — 15 条 EARS 格式需求
+- ✅ [design.md](.kiro/specs/photo-albums-zh/design.md) — 包含 Mermaid 图表的架构设计
+- ✅ [tasks.md](.kiro/specs/photo-albums-zh/tasks.md) — 12 个带有依赖关系的实施任务
 
-Want to inspect a complex, large-scale requirements set? Jump to the advanced [customer-support-rag-backend-en](.kiro/specs/customer-support-rag-backend-en/) spec for the end-to-end requirements → design → tasks flow.
+想要查看复杂的、大规模的需求集？请跳转到高级示例 [customer-support-rag-backend-en](.kiro/specs/customer-support-rag-backend-en/)，查看端到端的需求 → 设计 → 任务流程。
 
-![Example: design.md System Flow](assets/design-system_flow.png)
+![示例：design.md 系统流程](assets/design-system_flow.png)
 
-## 🎯 Use Cases
+## 🎯 使用场景
 
-| Scenario | Workflow |
+| 场景 | 工作流 |
 |----------|----------|
-| **New feature (greenfield)** | `spec-init` → `spec-requirements` → `spec-design` → `spec-tasks` → `spec-impl` |
-| **Enhance existing code (brownfield)** | `steering` → `spec-init` → (`validate-gap` →) `spec-design` → (`validate-design` →) `spec-tasks` → `spec-impl` |
-| **Team process alignment** | Customize templates once in `.kiro/settings/templates/` → all agents follow same format |
+| **新功能开发 (Greenfield)** | `spec-init` → `spec-requirements` → `spec-design` → `spec-tasks` → `spec-impl` |
+| **增强现有代码 (Brownfield)** | `steering` → `spec-init` → (`validate-gap` →) `spec-design` → (`validate-design` →) `spec-tasks` → `spec-impl` |
+| **团队流程对齐** | 在 `.kiro/settings/templates/` 中自定义一次模板 → 所有代理遵循相同格式 |
 
-## 🎨 Customization
+## 🎨 自定义
 
-Customize templates and rules in `{{KIRO_DIR}}/settings/` to match your team's workflow:
+在 `{{KIRO_DIR}}/settings/` 中自定义模板和规则，以匹配团队的工作流程：
 
-- **templates/** - Define document structure (requirements, design, tasks)
-- **rules/** - Define AI generation principles and judgment criteria
+- **templates/** - 定义文档结构（需求、设计、任务）
+- **rules/** - 定义 AI 生成原则和评判标准
 
-Common use cases: PRD-style requirements, API/database schemas, approval gates, JIRA integration, domain-specific standards.
+常见用例：PRD 风格需求、API/数据库架构、审批门禁、JIRA 集成、领域特定标准。
 
-📖 **[Customization Guide](docs/guides/customization-guide.md)** — Complete guide with practical examples
+📖 **[自定义指南](docs/guides/customization-guide-zh.md)** — 包含实际案例的完整指南
 
-## ⚙️ Advanced Installation
+## ⚙️ 高级安装
 
-### Choose Your Agent
+### 选择你的代理
 
 ```bash
-npx cc-sdd@latest --claude         # Claude Code (11 commands) [default]
-npx cc-sdd@latest --claude-agent   # Claude Code Subagents (12 commands + 9 subagents)
+npx cc-sdd@latest --claude         # Claude Code (11 个命令) [默认]
+npx cc-sdd@latest --claude-agent   # Claude Code 子代理 (12 个命令 + 9 个子代理)
 npx cc-sdd@latest --cursor         # Cursor IDE
 npx cc-sdd@latest --gemini         # Gemini CLI
 npx cc-sdd@latest --codex          # Codex CLI
@@ -93,66 +93,67 @@ npx cc-sdd@latest --qwen           # Qwen Code
 npx cc-sdd@latest --windsurf       # Windsurf IDE
 ```
 
-### Choose Your Language
+### 选择你的语言
 
 ```bash
-npx cc-sdd@latest --lang ja        # Japanese
-npx cc-sdd@latest --lang zh-TW     # Traditional Chinese
-npx cc-sdd@latest --lang es        # Spanish
-# Supports: en, ja, zh-TW, zh, es, pt, de, fr, ru, it, ko, ar, el
+npx cc-sdd@latest --lang zh        # 简体中文
+npx cc-sdd@latest --lang zh-TW     # 繁体中文
+npx cc-sdd@latest --lang ja        # 日语
+npx cc-sdd@latest --lang es        # 西班牙语
+# 支持：en, ja, zh-TW, zh, es, pt, de, fr, ru, it, ko, ar, el
 ```
 
-### Advanced Options
+### 高级选项
 
 ```bash
-# Preview changes before applying
+# 在应用更改前预览
 npx cc-sdd@latest --dry-run
 
-# Custom specs directory
+# 自定义规格目录
 npx cc-sdd@latest --kiro-dir docs
 ```
 
 ---
 
-## 📚 Documentation & Support
+## 📚 文档与支持
 
-### 📖 Complete Guides (English | 日本語)
+### 📖 完整指南 (英语 | 日本語)
 
-| Guide | What You'll Learn | Links |
+| 指南 | 你将学到什么 | 链接 |
 |-------|-------------------|-------|
-| **Command Reference** | All 11 `/kiro:*` commands with detailed usage, parameters, and examples | [English](docs/guides/command-reference.md) \| [日本語](docs/guides/ja/command-reference.md) |
-| **Customization Guide** | 7 practical examples: PRD requirements, frontend/backend designs, JIRA integration | [English](docs/guides/customization-guide.md) \| [日本語](docs/guides/ja/customization-guide.md) |
-| **Spec-Driven Guide** | Complete workflow methodology from requirements to implementation | [English](docs/guides/spec-driven.md) \| [日本語](docs/guides/ja/spec-driven.md) |
-| **Claude Subagents** | Advanced: Using 9 specialized subagents for complex projects | [English](docs/guides/claude-subagents.md) \| [日本語](docs/guides/ja/claude-subagents.md) |
-| **Migration Guide** | Upgrading from v1.x to v2.0.0 | [English](docs/guides/migration-guide.md) \| [日本語](docs/guides/ja/migration-guide.md) |
+| **命令参考** | 所有 11 个 `/kiro:*` 命令的详细用法、参数和示例 | [English](docs/guides/command-reference.md) \| [简体中文](docs/guides/command-reference-zh.md) \| [日本語](docs/guides/ja/command-reference.md) |
+| **自定义指南** | 7 个实际示例：PRD 需求、前/后端设计、JIRA 集成 | [English](docs/guides/customization-guide.md) \| [简体中文](docs/guides/customization-guide-zh.md) \| [日本語](docs/guides/ja/customization-guide.md) |
+| **规格驱动指南** | 从需求到实施的完整工作流方法论 | [English](docs/guides/spec-driven.md) \| [简体中文](docs/guides/spec-driven-zh.md) \| [日本語](docs/guides/ja/spec-driven.md) |
+| **Claude 子代理** | 高级：针对复杂项目使用 9 个专门的子代理 | [English](docs/guides/claude-subagents.md) \| [简体中文](docs/guides/claude-subagents-zh.md) \| [日本語](docs/guides/ja/claude-subagents.md) |
+| **迁移指南** | 从 v1.x 升级到 v2.0.0 | [English](docs/guides/migration-guide.md) \| [日本語](docs/guides/ja/migration-guide.md) |
 
-### Package Documentation
-- English: [tools/cc-sdd/README.md](tools/cc-sdd/README.md)
+### 软件包文档
+- 英语: [tools/cc-sdd/README.md](tools/cc-sdd/README.md)
 - 日本語: [tools/cc-sdd/README_ja.md](tools/cc-sdd/README_ja.md)
 - 繁體中文: [tools/cc-sdd/README_zh-TW.md](tools/cc-sdd/README_zh-TW.md)
 
 ---
 
-## 📚 Related Resources
+## 📚 相关资源
 
-📝 **Articles & Presentations**
-- [Kiroの仕様書駆動開発プロセスをClaude Codeで徹底的に再現した](https://zenn.dev/gotalab/articles/3db0621ce3d6d2) - Zenn Article (Japanese)
-- [Claude Codeは仕様駆動の夢を見ない](https://speakerdeck.com/gotalab555/claude-codehashi-yang-qu-dong-nomeng-wojian-nai) - Speaker Deck Presentation (Japanese)
+📝 **文章与演讲**
+- [在 Claude Code 中彻底再现 Kiro 的规格驱动开发流程](https://zenn.dev/gotalab/articles/3db0621ce3d6d2) - Zenn 文章 (日语)
+- [Claude Code 不做规格驱动的梦](https://speakerdeck.com/gotalab555/claude-codehashi-yang-qu-dong-nomeng-wojian-nai) - Speaker Deck 演讲稿 (日语)
 
-🔗 **External Resources**
-- [Kiro IDE](https://kiro.dev) - Enhanced spec management and team collaboration
-- [Kiro's Spec Methodology](https://kiro.dev/docs/specs/) - Proven spec-driven development methodology
-- [AI-Assisted SDD: Spec-Driven Development with Gemini, Claude, and cc-sdd](https://www.amazon.com/dp/B0CW19YX9R) - Comprehensive book available on Amazon
+🔗 **外部资源**
+- [Kiro IDE](https://kiro.dev) - 增强的规格管理和团队协作
+- [Kiro 的规格方法论](https://kiro.dev/docs/specs/) - 经过验证的规格驱动开发方法论
+- [AI 辅助 SDD：使用 Gemini, Claude 和 cc-sdd 进行规格驱动开发](https://www.amazon.com/dp/B0CW19YX9R) - 亚马逊上的完整书籍
 
-## 📦 Package Information
+## 📦 软件包信息
 
-This repository contains the **cc-sdd** NPM package located in [`tools/cc-sdd/`](tools/cc-sdd/).
+此存储库包含位于 [`tools/cc-sdd/`](tools/cc-sdd/) 的 **cc-sdd** NPM 软件包。
 
-For detailed documentation, installation instructions, and usage examples, see:
-- [**Tool Documentation**](tools/cc-sdd/README.md) - Complete cc-sdd tool guide
-- [**Japanese Documentation**](tools/cc-sdd/README_ja.md) - 日本語版ツール説明
+有关详细文档、安装说明和使用示例，请参阅：
+- [**工具文档**](tools/cc-sdd/README.md) - 完整的 cc-sdd 工具指南
+- [**日语文档**](tools/cc-sdd/README_ja.md) - 日本語版ツール説明
 
 
-## License
+## 许可证
 
 MIT License

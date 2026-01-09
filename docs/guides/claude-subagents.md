@@ -1,5 +1,7 @@
 # Claude Code Subagents Workflow (Spec-Quick Focus)
 
+> 📖 **简体中文版点此:** [Claude Code Subagents 工作流 (简体中文)](claude-subagents-zh.md)
+>
 > 📖 **日本語ガイドはこちら:** [Claude サブエージェントガイド (日本語)](ja/claude-subagents.md)
 
 This guide explains how the **Claude Code Subagents** install target (`--claude-agent` / `--claude-code-agent`) accelerates the spec workflow via the `spec-quick` command. Other `/kiro:*` commands reuse the same Subagents, but this document focuses on the spec-quick orchestration because it is the only Subagent-enabled command with its own control logic.
